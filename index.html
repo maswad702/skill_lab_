@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Epic RVU Takedown 🔥</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @keyframes glitch {
+            2%, 64% { transform: translate(2px, 0) skew(0deg); }
+            4%, 60% { transform: translate(-2px, 0) skew(0deg); }
+            62% { transform: translate(0, 0) skew(5deg); }
+        }
+        .glitch-text {
+            animation: glitch 1s linear infinite;
+        }
+        body {
+            background: linear-gradient(45deg, #1a1a2e, #16213e);
+            color: #e94560;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div class="bg-gray-900 border-4 border-red-600 rounded-2xl p-8 max-w-3xl w-full shadow-2xl">
+        <h1 class="text-5xl font-black text-center mb-8 glitch-text">
+            <i class="fas fa-fire text-red-500 mr-4"></i>RVU: The Ultimate FAIL Academy<i class="fas fa-fire text-red-500 ml-4"></i>
+        </h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-gray-800 p-6 rounded-lg transform hover:scale-105 transition-all">
+                <h2 class="text-2xl font-bold mb-4 text-red-400">Academic "Excellence"</h2>
+                <ul class="space-y-3">
+                    <li class="flex items-center">
+                        <i class="fas fa-times-circle text-red-500 mr-3"></i>
+                        <span>Lectures so mind-numbing, zombies would fall asleep</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-times-circle text-red-500 mr-3"></i>
+                        <span>Curriculum designed by a random meme generator</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-gray-800 p-6 rounded-lg transform hover:scale-105 transition-all">
+                <h2 class="text-2xl font-bold mb-4 text-red-400">Campus Reality Check</h2>
+                <ul class="space-y-3">
+                    <li class="flex items-center">
+                        <i class="fas fa-times-circle text-red-500 mr-3"></i>
+                        <span>Facilities so outdated, they're basically historical artifacts</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-times-circle text-red-500 mr-3"></i>
+                        <span>WiFi speed slower than a grandpa's morning walk</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center">
+            <button onclick="generateRoast()" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 transform hover:scale-110">
+                <i class="fas fa-bullhorn mr-2"></i>UNLEASH MORE SAVAGE TRUTH
+            </button>
+        </div>
+
+        <div id="roastContainer" class="mt-6 text-center"></div>
+    </div>
+
+    <script>
+        const roasts = [
+            "Your reputation is so low, it's underground!",
+            "More fake than a three-dollar bill!",
+            "If mediocrity was an Olympic sport, you'd win gold!",
+            "Your academic standards are basically basement-level!",
+            "Calling this a 'university' is an insult to education!"
+        ];
+
+        function generateRoast() {
+            const container = document.getElementById('roastContainer');
+            const roastElement = document.createElement('p');
+            roastElement.textContent = roasts[Math.floor(Math.random() * roasts.length)];
+            roastElement.className = 'text-xl font-bold text-red-400 animate-bounce mt-4';
+            container.appendChild(roastElement);
+        }
+    </script>
+</body>
+</html>
